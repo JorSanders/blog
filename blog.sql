@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 13 feb 2016 om 13:00
+-- Gegenereerd op: 13 feb 2016 om 15:01
 -- Serverversie: 10.1.9-MariaDB
 -- PHP-versie: 5.5.30
 
@@ -32,6 +32,14 @@ CREATE TABLE `message` (
   `message` text NOT NULL,
   `op` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Gegevens worden geëxporteerd voor tabel `message`
+--
+
+INSERT INTO `message` (`ID`, `titel`, `message`, `op`) VALUES
+(1, 'Forever', 'Forever we remain oblivious to the future, \r\nlost to the past and enduring our torture. \r\nForever we take chances to settle our scores, \r\nlosing some battles and winning some wars.', 14),
+(10, 'Count', '<h1>lets count</h1>\r\n<ol>\r\n<li>one</li>\r\n<li>two</li>\r\n<li>three</li>\r\n<li>four</li>\r\n</ol>\r\n<p><span style="text-decoration: underline;">wow many impressive&nbsp;</span></p>', 14);
 
 -- --------------------------------------------------------
 
@@ -79,7 +87,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT voor een tabel `message`
 --
 ALTER TABLE `message`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT voor een tabel `user`
 --
