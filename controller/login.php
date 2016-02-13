@@ -6,7 +6,8 @@ include '../model/connect.php';
 $username = $_POST['username'];
  $password = md5($_POST['password']);
 
-$sql="SELECT username, password, id, admin FROM user WHERE username='$username' AND password='$password'";
+$sql="SELECT username, name, password, id, admin 
+FROM user WHERE username='$username' AND password='$password'";
 $result = mysqli_query($conn, $sql);
 $number = mysqli_num_rows($result);
 
@@ -17,6 +18,7 @@ if($number==1){
 	$details = mysqli_fetch_assoc($result);
 
 	$_SESSION['admin']=$details['admin'];
+	$_SESSION['name']=$details['name'];
 	$_SESSION['id']=$details['id'];
 	
 	

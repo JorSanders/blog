@@ -1,4 +1,4 @@
-<link rel=stylesheet href="../style.css" type="text/css">
+<link rel=stylesheet href="../style/style.css" type="text/css">
 
 <div id="header">
 <span id="headerText">
@@ -10,7 +10,8 @@ Wow de Jor blog
 
 
 if(isset($_SESSION['username'])){
-	echo "Welcome {$_SESSION['username']}!";
+	echo "Welcome {$_SESSION['name']}!<br>
+	Logged in as {$_SESSION['username']}";
 }else {
 	echo "Welcome guest";
 }

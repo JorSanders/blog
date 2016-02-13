@@ -5,24 +5,27 @@ include '../include/header.php';
 
 
 
-$sql = "SELECT * FROM message";
+$sql = "SELECT * 
+FROM message, user
+	WHERE message.op = user.id
+GROUP BY user.admin DESC, message.id DESC";
 $result = mysqli_query($conn, $sql);
 
 
 while(list($id, $titel, $message, $op)= mysqli_fetch_row($result)){
-	echo "<table>";
 	$sql2 = "SELECT username FROM user WHERE id = $op";
 	$result2 = mysqli_query($conn, $sql2);
 	$username = mysqli_fetch_assoc($result2)['username'];
-	echo "<tr><td>Gepost door: $username</td></tr>";
-	echo "<tr><td>Titel van de post: $titel</td>
-	</td> <tr><td>".nl2br($message)."</tr></td>";
+	
+	echo "$titel &nbsp; &nbsp; by $username <br> <br>";
+	echo"$message <br>";
+	
 	if($op == @$_SESSION['id'] || @$_SESSION['admin'] == 1){
-		echo"<tr><td><a href=\"update_message_form.php?id=$id\">Edit message</a>&nbsp; &nbsp; &nbsp;
-		<a href=\"delete_message_form.php?id=$id\">Delete message</a></td></tr>";}
-	echo "</table>";
+		echo"<a href=\"update_message_form.php?id=$id\">Edit message</a>&nbsp; &nbsp; &nbsp;
+		<a href=\"delete_message_form.php?id=$id\">Delete message</a>";}
 
-	echo"<br><br>";
+
+	echo"<br><hr><br>";
 }
 
 include '../include/footer.php';

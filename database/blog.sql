@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 13 feb 2016 om 15:01
+-- Gegenereerd op: 13 feb 2016 om 18:33
 -- Serverversie: 10.1.9-MariaDB
 -- PHP-versie: 5.5.30
 
@@ -38,8 +38,10 @@ CREATE TABLE `message` (
 --
 
 INSERT INTO `message` (`ID`, `titel`, `message`, `op`) VALUES
-(1, 'Forever', 'Forever we remain oblivious to the future, \r\nlost to the past and enduring our torture. \r\nForever we take chances to settle our scores, \r\nlosing some battles and winning some wars.', 14),
-(10, 'Count', '<h1>lets count</h1>\r\n<ol>\r\n<li>one</li>\r\n<li>two</li>\r\n<li>three</li>\r\n<li>four</li>\r\n</ol>\r\n<p><span style="text-decoration: underline;">wow many impressive&nbsp;</span></p>', 14);
+(1, 'admin', '<p>admin</p>', 16),
+(2, 'Forever', 'Forever we remain oblivious to the future, \r\nlost to the past and enduring our torture. \r\nForever we take chances to settle our scores, \r\nlosing some battles and winning some wars.', 14),
+(10, 'Count', '<h1>lets count</h1>\r\n<ol>\r\n<li>one</li>\r\n<li>two</li>\r\n<li>three</li>\r\n<li>four</li>\r\n</ol>\r\n<p><span style="text-decoration: underline;">wow many impressive&nbsp;</span></p>', 14),
+(11, 'jor', '<p>jor</p>', 15);
 
 -- --------------------------------------------------------
 
@@ -60,7 +62,9 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `username`, `name`, `password`, `admin`) VALUES
-(14, 'aa', 'aa', '4124bc0a9335c27f086f24ba207a4912', 1);
+(14, 'aa', 'aa', '4124bc0a9335c27f086f24ba207a4912', 0),
+(15, 'jor', 'jor', '9b1e2f5b48647011e1c88ef057f236d6', 0),
+(16, 'admin', 'admin', '21232f297a57a5a743894a0e4a801fc3', 1);
 
 --
 -- Indexen voor geëxporteerde tabellen
@@ -87,12 +91,12 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT voor een tabel `message`
 --
 ALTER TABLE `message`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT voor een tabel `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 --
 -- Beperkingen voor geëxporteerde tabellen
 --

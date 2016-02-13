@@ -5,8 +5,12 @@ echo"
 <div id=\"menu\">
 <ul id=\"menuList\">
 Menu
+<br><br>
 <li><a href=\"../view/overview_messages.php\">Overview messages</a></li>
-<li><a href=\"../view/insert_message_form.php\">Upload message</a></li>";
+<br>
+<li><a href=\"../view/insert_message_form.php\">Upload message</a></li>
+<br>";
+
 if(!isset($_SESSION['username'])){
 	echo"
 	<li><a href=\"../view/login_form.php\">Login</a></li>
