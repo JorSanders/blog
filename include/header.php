@@ -2,7 +2,7 @@
 
 <div id="header">
 <span id="headerText">
-Wow de Jor blog 
+Blog de bouwer!, kunnen wij het bouwen? 
 </span>
 
 <span id="loginStatus">
@@ -12,10 +12,17 @@ Wow de Jor blog
 if(isset($_SESSION['username'])){
 	echo "Welcome {$_SESSION['name']}!<br>
 	Logged in as {$_SESSION['username']}";
+	echo"</span>";
+	
+	if( file_exists("../user_avatars/{$_SESSION['username']}.jpg")){
+		echo"<img id='avatar' src='../user_avatars/{$_SESSION["username"]}.jpg' alt='Error loading avatar' >";
+	}
+	echo"<span id=\"loginStatus\">";
 }else {
 	echo "Welcome guest";
 }
 ?>
+
 </span>
 </div>
 
