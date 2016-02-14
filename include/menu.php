@@ -11,7 +11,8 @@ Menu
 <br>
 <li><a href=\"../view/insert_message_form.php\">Upload message</a></li>
 <br>
-<li><a href=\"../view/upload_avatar_form.php\">Upload your very own avatar</a></li>
+<li><a href=\"../view/update_profile_form.php\">Email / avatar</a></li>
+
 <br>";
 
 if(!isset($_SESSION['username'])){

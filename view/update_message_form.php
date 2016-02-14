@@ -9,6 +9,8 @@
 <?php
 include '../include/menu.php';
 include '../include/header.php';
+include '../include/sentry.php';
+
 $id = $_GET['id'];
 include '../model/connect.php';
 
