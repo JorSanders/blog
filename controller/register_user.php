@@ -6,7 +6,7 @@ $username = $_POST['username'];
 $name = $_POST['name'];
    $password= md5($_POST['password']);
 
-$sql = "INSERT INTO `user` (`username`, `name`, `password`, `admin`) VALUES ('$username', '$name', '$password', 0) ";
+$sql = "INSERT INTO `user` (id ,`username`, `name`, `password`, `admin`, email) VALUES (NULL, '$username', '$name', '$password', 0, '') ";
 
 $result = mysqli_query($conn, $sql);
 
